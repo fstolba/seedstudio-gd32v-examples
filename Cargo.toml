@@ -36,6 +36,5 @@ features = ['lcd']
 rustdoc-args = ["--cfg", "docsrs"]
 default-target = "x86_64-unknown-linux-gnu"
 
-
 [[example]]
 name = "leds"
