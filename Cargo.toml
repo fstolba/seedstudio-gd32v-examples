@@ -1,12 +1,8 @@
 [package]
-name = "seedstudio-gd32v"
+name = "seedstudio-gd32v-examples"
 version = "0.1.0"
-authors = ["Vadim Kaushan <admin@disasm.info>"]
-repository = "https://github.com/riscv-rust/seedstudio-gd32v"
-categories = ["embedded", "hardware-support", "no-std"]
-description = "Board support crate for the GD32 RISC-V Dev Board from SeeedStudio"
-keywords = ["riscv", "gd32", "bsp"]
-license = "ISC"
+description = "More example code for the Seeedstudio GD32VF103 eval board."
+license = "MIT"
 edition = "2018"
 
 [dependencies]
@@ -16,25 +12,6 @@ nb = "0.1.2"
 riscv-rt = "0.6.1"
 riscv = "0.5.4"
 panic-halt = "0.2.0"
-
-[dependencies.ili9341]
-version = "0.3.0-beta.1"
-features = ["graphics"]
-optional = true
-
-[dev-dependencies]
-riscv-rt = "0.6.1"
-panic-halt = "0.2.0"
-embedded-graphics = "0.6.2"
-tinybmp =  {version="0.2.2", features = [ "graphics" ] }
-
-[features]
-lcd = ["ili9341"]
-
-[package.metadata.docs.rs]
-features = ['lcd']
-rustdoc-args = ["--cfg", "docsrs"]
-default-target = "x86_64-unknown-linux-gnu"
 
 [[example]]
 name = "leds"
