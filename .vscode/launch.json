@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "gdb",
+            "request": "attach",
+            "name": "Debug Microcontroller",
+            "target": "",
+            "executable": "${workspaceRoot}/target/riscv32imac-unknown-none-elf/debug/examples/ferris",
+            "cwd": "${workspaceRoot}",
+            //"preLaunchTask": "Build ferris",
+            "gdbpath": "J:\\Felix\\Rust\\riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-w64-mingw32\\bin\\riscv64-unknown-elf-gdb.exe",
+            "autorun": [
+                "set arch riscv:rv32",
+                "target extended-remote 127.0.0.1:3333",
+                "set print asm-demangle on",
+                "set confirm off",
+                "set backtrace limit 32",
+                "load"
+            ]
+        }
+    ]
+}
